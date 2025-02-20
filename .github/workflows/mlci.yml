@@ -22,4 +22,7 @@ jobs:
       - name: Evaluation
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: make eval
+        run:
+          pip instal -r requirements.txt
+          python train.py
+          echo "Model Metrics"
